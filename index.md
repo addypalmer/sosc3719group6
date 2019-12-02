@@ -53,7 +53,7 @@
 			<div id="dr-comics">
 				<div class="images">
 					<div class="img-container">
-						<img src="media/drcomics.jpg" alt="Max and Son Storefront">
+						<img src="media/drcomics.jpg" alt="Dr. Comics Storefront">
 					</div>
 				</div>
 				<div class="infoBox">
@@ -67,7 +67,7 @@
 			<div id="graffitis">
 				<div class="images">
 					<div class="img-container">
-						<img src="media/graffitis.jpg" alt="Graffiti’s Storefront">
+						<img src="media/graffitis.jpg" alt="In front of Graffiti’s ">
 					</div>
 				</div>
 				<div class="infoBox">
@@ -105,7 +105,7 @@
 			<div id="akrams">
 				<div class="max">
 					<div class="img-container">
-						<img src="media/akrams.jpg" alt="Max and Son Storefront">
+						<img src="media/akrams.JPG" alt="Akram's Storefront">
 					</div>
 				</div>
 				<div class="infoBox">
@@ -144,7 +144,7 @@
 
 			<div class="gap-example">
     			<audio id="audio-player">
-       			 <source src="kehFree.mp3" type="audio/mpeg">
+       			 <source src="" type="audio/mpeg">
     			</audio>
 			</div>
 			<!-- Audio Icon for 15 seconds: https://icons8.com/icons/set/15-seconds -->
