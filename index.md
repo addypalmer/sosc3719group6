@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SOSC3719: Group 6 Tour</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="main.css">
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+
+  <script src="p5.min.js"></script>
+
+  <link rel="stylesheet" href="green-audio-player-master/green-audio-player-master/dist/css/green-audio-player.css">
+  <script src="green-audio-player-master/green-audio-player-master/dist/js/green-audio-player.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<div class="container">
+
+		<div id="stop-container">
+
+			<!-- <div class="top-bar"></div> -->
+
+			<div id="la-salle">
+				<div class="images">
+  					<div class="img-container">
+						<img src="media/lasalle.jpg" alt="Photo of the outside of La Salle Theatre">
+						<img src="media/sanagans01.jpg" alt="Sanagan's Meat Locker Storefront" style="display: none;">
+					</div>
+				</div>
+				<div class = "infoBox">				
+					<h1>Tour Stop 1: Toronto's La Salle Theatre</h1>
+					<p>
+						La Salle Theatre in Kensington had 650 seats and was located at 526-528 Dundas St West. this building has seen lots of change since the day that it opened many years ago. In 1938, the theatre was renovated and officially opened as La Salle theatre, a place locals went to on Friday nights with their friends and family to watch movies. After many years, the demographic of the area changed and in the 1960s La Salle became Pagoda and screened Chinese films only for another decade until the early 1970s when the theatre shut down again.
+						<br><br>
+	 					More recently, it was converted into a tiny shopping mall catering to the Canadian Vietnamese community in the area.The building still stands and is almost unrecognizable as a theatre anymore as it’s now been completely abandoned since it’s closure in 2012. This building served the changing community in more ways than for many years and is an important art deco piece in the area.
+					</p>
+				</div>
+			</div>
+
+			<div id="dr-comics">
+				<div class="images">
+					<div class="img-container">
+						<img src="media/drcomics.jpg" alt="Max and Son Storefront">
+					</div>
+				</div>
+				<div class="infoBox">
+					<h1>Tour Stop 2: Dr. Comics</h1>
+					<p>
+						This store was located on 196 Baldwin street until it merged with the sea food store next door to it 198 Baldwin Street on May 2013. It was originally a house which was turned into a fish market niche to sea food lovers with produce to tend to all the fresh seafood you needed. This was a place known to locals who came to buy their raw seafood and could appreciate the heavy smell of it as well. 
+					</p>
+				</div>	
+			</div>
+
+			<div id="graffitis">
+				<div class="images">
+					<div class="img-container">
+						<img src="media/graffitis.jpg" alt="Graffiti’s Storefront">
+					</div>
+				</div>
+				<div class="infoBox">
+					<h1>Tour Stop 3: Graffiti's Bar and Grill</h1>
+					<p>
+						Graffiti’s Bar and Grill opened its doors in 1995 as a space where local bands and musicians could perform. It was the home of the “black metal brunch” with live music shows and Saturday matinees. A music studio behind the bar called Kensington Sound also provided an influx of artists who performed. Graffiti’s had a perfect vibe that fit into Kensington’s unique atmosphere. It was a small place that provided intimacy during shows that couldn’t be found anywhere else. The owner Stephen Mitchel made sure to hire only local employees of the area to keep the bar feeling like it belongs in Kensington. 
+						<br><br>
+						After 22 years, Stephen Mitchen decided to sell the place in 2017 but only to an owner that was “good for Kensington”. Eventually in February 2018, Graffiti’s Bar and Grill closed permanently when Ron Hawkins, a local Kensginton artist, played the last show. The new owner of the now Koi Koi Saké Bar is still a Kensington local. 
+	 
+					</p>
+				</div>
+			</div>
+
+			<div id="max-and-son">
+				<div class="images">
+					<div class="img-container">
+						<img src="media/max_and_son.jpg" alt="Max and Son Storefront">
+					</div>
+				</div>
+				<div class="infoBox">
+					<h1>Tour Stop 4: Max & Son Butcher Shop</h1>
+					<p>
+						Max and Son was the local butcher shop, located on the block closest to college street on Augusta Avenue. The shop ran for 54 years straight and was then later bought by Peter Managuan in 2001.
+						<br><br>
+						Father Max and his son, Solly had worked together in the butcher shop - holding on their family story through ownership. The butcher shop was opened by Max, an immigrant coming from Siberia to Canada in 1949. While the building where the shop was located was constructed in 1930, Max had opened the shop in 1955, and the shop became a fixture of the neighbourhood in the process.
+						<br><br>
+ 						“Max and Son” was one of the last of the Jewish businesses to survive from the earlier days of Kensington, when it was primarily a Jewish market. Max Stern’s son, Saul (Solly) came to work in his father’s meat market in the 1950s, after he graduated from high school at 16 years of age. He spent his entire working life in the store, retiring from the shop in 2009.
+ 						<br><br>
+						In a post found on the now-owner’s Website, Sanagan’s, it is revealed how the building came to be sold. At the end of the 2009 summer, Peter was walking through Kensington and saw a “For Sale” sign on the historic butcher shop. When he went in, he found Solly who apparently “needed a break”, which Peter then capitalized on. The butcher shop was sold to Peter and he is running his own butcher shop called “Sanagan's Meat Locker”, which has become a success in it’s own right - recently expanding to the east end. Despite the fact that the shutting of this business is indicative of a generation of business owners being forced into obsolescence by their age, the historicization of the original Max and Son that Peter has done through his own volition is symbolic of business owners appreciating the legacy of culture and business that the contemporary market has been built upon. In fact, his documentation of the store through interviews with news outlets was the largest source of information that we could find on the store, keeping the Market’s legacy alive.
+
+					</p>
+				</div>
+			</div>
+
+			<div id="akrams">
+				<div class="max">
+					<div class="img-container">
+						<img src="media/akrams.jpg" alt="Max and Son Storefront">
+					</div>
+				</div>
+				<div class="infoBox">
+					<h1>Tour Stop 5: Akram's Shoppe</h1>
+					<p>
+						Akram’s Shoppe, named after the owner Akram, specialized in Middle-Eastern delicacies including their special falafel sandwich, chicken skewers, homemade hummus and baba ghanoush to name a few. Located at 191 Baldwin, it had a colourful display that added character to Kensington Market. Part self-serve cafeteria, part grocery store, it was a staple for students in the area. It was at an affordable price, with a healthy falafel costing only $2.99, and a complete meal for only $6. They even had some middle-easten groceries for sale at a lower cost than other bulk stores.
+ 						<br><br>
+ 						After being closed for renovations for 3 years from a tragedy of the store collapsing when trying to add a third floor, Akram’s Shoppe re-opened in 2010. It was open for over 20 years and officially shut down in 2017.
+
+					</p>
+				</div>
+			</div>
+
+			<div id="zimmermans">
+				<div class="images">
+					<div class="img-container">
+						<img src="media/zimmermans.jpg" alt="Zimmerman's Storefront">
+						<img src="media/max_and_son.jpg" alt="Max and Son Storefront" style ="display:none">
+						<img src="media/sanagans01.jpg" alt="Sanagan's Meat Locker Storefront" style="display: none;">
+					</div>
+				</div>
+				<div class="infoBox">
+					<h1>Tour Stop 6: Zimmermans</h1>
+					<p>
+						Zimmerman’s discount store was owned and operated by Zoltan Zimmerman, who came to Canada in 1951 from Czechoslovakia. The Holocasut survivor came to Toronto after losing his parents in Auschwitz with promises to take care of his brothers and sisters. After 2 years living in Toronto, with the help of his brother and 2 two brother in-laws Zoltan started his business. Rows and rows filled with foods, vegetables, clothing, personal care products, household products and suitcases, the store was opened for more than 6 decades before its closure in 2015. 
+						<br><br>
+						When Zimmerman moves to Augusta Avenue to open his store his son recalls his dad working from 4am to 10 pm. His son had grown up to becoming part of his fathers team and working at Zimmerman’s discount store. 
+						<br><br>
+						The store started out as a victorian house that Zimmerman bought located on208 Augusta ave. Later on Zimmerman then bought the 2 houses on both sides of the first bought house making him owner of the houses 208, 210, and 212 Augusta Avenue. He combined the homes to create a bigger space which he turned into his store for he knew to be successful he had to work hard. 
+						<br><br>
+						His store became known to the locals and even people around the city, being the one stop shop of all your personal needs. The store became part of the neighbourhood and all that knew about the store were welcomed by the owner himself with great kindness. The store had done its most to grow with the times, as it was the convent place to buy before the convent Walmart, Costoco, and other common super-market franchises. With so much competition growing more and more Zimmerman decided to sell his store and said “all good things have to come to an end”. The store was later closed permanently in early January of 2015. With a heavy heart Zimmerman passed away at 93 years but was remembered as a hard worker who believed and said he loved his customers because, ”You learn a lot from your customers” he said. 
+					</p>
+				</div>
+			</div>
+
+
+			<div class="gap-example">
+    			<audio id="audio-player">
+       			 <source src="kehFree.mp3" type="audio/mpeg">
+    			</audio>
+			</div>
+			<!-- Audio Icon for 15 seconds: https://icons8.com/icons/set/15-seconds -->
+
+			<div id="bottom-bar">
+				<!-- <object id="preButton" data="media/previous_button.svg" type="image/svg+xml"></object> -->
+				<svg id="preButton" xmlns="http://www.w3.org/2000/svg" id="stop01" width="40" height="40">
+						<circle cx="20" cy="20" r="15" stroke="#4B88A2" stroke-width="2.5" fill="WHITE"/>
+						<text fill="#4B88A2" font-size="20" font-weight= "bold" font-family="Verdana" x="14" y=27>&#10094;</text>
+					</svg>
+
+				<div id="stop-selection">
+					<svg xmlns="http://www.w3.org/2000/svg" id="stop01" width="10" height="10">
+						<circle id="b01" cx="5" cy="5" r="3" style="stroke:#4B88A2; stroke-width:1.5; fill:white;"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" id="stop02" width="10" height="10">
+						<circle id="b02" cx="5" cy="5" r="3" stroke="#4B88A2" stroke-width="1.5" fill="white"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" id="stop03" width="10" height="10">
+						<circle id="b03" cx="5" cy="5" r="3" stroke="#4B88A2" stroke-width="1.5" fill="white"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" id="stop04" width="10" height="10">
+						<circle id="b04" cx="5" cy="5" r="3" stroke="#4B88A2" stroke-width="1.5" fill="white"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" id="stop05" width="10" height="10">
+						<circle id="b05" cx="5" cy="5" r="3" stroke="#4B88A2" stroke-width="1.5" fill="white"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" id="stop06" width="10" height="10">
+						<circle id="b06" cx="5" cy="5" r="3" stroke="#4B88A2" stroke-width="1.5" fill="white"/>
+					</svg>
+					
+				</div>
+				<!-- <object id="nextButton" data="media/next_button.svg" type="image/svg+xml"></object> -->
+				<svg id="nextButton" xmlns="http://www.w3.org/2000/svg" id="stop01" width="45" height="45">
+						<circle cx="20" cy="20" r="15" stroke="#4B88A2" stroke-width="2.5" fill="WHITE"/>
+						<text fill="#4B88A2" font-size="20" font-weight= "bold" font-family="Verdana" x="15" y=27>&#10095;</text>
+					</svg>
+
+			</div>
+					
+		</div> 
+
+		<div id="me"><p>SOSC3719 | Group 6</p></div>
+   		<div id="mapid"></div>
+
+
+	</div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
