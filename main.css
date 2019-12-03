@@ -87,6 +87,7 @@ https://stackoverflow.com/questions/6780614/css-how-to-position-two-elements-on-
  	height:100%;
  	box-shadow: 3px 0px 50px black;
  	z-index: 2;
+ 	/*display: none;*/
  }
 
 /*  #stop-container{
@@ -123,7 +124,7 @@ https://stackoverflow.com/questions/6780614/css-how-to-position-two-elements-on-
  	border-top: 1px solid grey; 
  }
 
- #max-and-son,  #zimmermans, #dr-comics, #akrams, #la-salle, #graffitis{
+ #max-and-son,  #zimmermans, #dr-comics, #akrams, #la-salle, #graffitis, #cosmic{
  	position: fixed;
  	width:480px;
  	/*height:100%;*/
@@ -139,7 +140,7 @@ https://stackoverflow.com/questions/6780614/css-how-to-position-two-elements-on-
  	overflow-y: scroll;
  }*/
 
-#max-and-son p, h2, #zimmermans p,h2, #dr-comics p,h2, #akrams p,h2, #la-salle p,h2, #graffitis p,h2{
+#max-and-son p, h2, #zimmermans p,h2, #dr-comics p,h2, #akrams p,h2, #la-salle p,h2, #graffitis p,h2, #cosmic p,h2{
 	/*margin: 15px;*/
 	/*padding:15px;*/
 }

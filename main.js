@@ -16,12 +16,12 @@ var activeStop = document.getElementById("stop01");
 
 var pgNum = -1;
 var pastPgNum = 0;
-var maxNum = 5;
+var maxNum = 7;
 var minNum = 0;
 
-var stopPg = ["#la-salle", "#dr-comics", "#graffitis", "#max-and-son", "#akrams", "#zimmermans"];
-var stopIds = ["stop01","stop02","stop03","stop04","stop05","stop06"];
-var buttonIds = ["b01", "b02", "b03", "b04", "b05", "b06"];
+var stopPg = ["#la-salle", "#dr-comics", "#graffitis", "#max-and-son", "#akrams", "#zimmermans", "#cosmic"];
+var stopIds = ["stop01","stop02","stop03","stop04","stop05","stop06", "stop07"];
+var buttonIds = ["b01", "b02", "b03", "b04", "b05", "b06", "b07"];
 
 
 
@@ -104,7 +104,7 @@ function changeStop(curr, past){
 	//imgGallery(curr);
 }
 
-var audioFiles = ["media/laSalle.mp3","media/drcomics.mp3", "media/graffitis.mp3", "media/max.mp3", "media/akrams.mp3", "media/zimmermans.mp3"];
+var audioFiles = ["media/laSalle.mp3","media/drcomics.mp3", "media/graffitis.mp3", "media/max.mp3", "media/akrams.mp3", "media/zimmermans.mp3", "media/cosmic.mp3" ];
 
 function audio(t){
 	var audioFile = document.getElementById("audio-player");
@@ -126,8 +126,9 @@ map.panTo([150, 300]);
 // L.DomUtil.create('div', 'info');
 
 
-var bounds = [[0,0], [1000,1000]];
-var image = L.imageOverlay('kensington-map.png', bounds).addTo(map);
+// var bounds = [[0,0], [1000,1000]];
+var bounds = [[0,0], [650,1080]];
+var image = L.imageOverlay('kensington-map-v2.png', bounds).addTo(map);
 map.fitBounds(bounds);
 
 
@@ -141,20 +142,29 @@ var Markers = L.Icon.extend({
 });
 
 var m01 = new Markers({iconUrl: 'media/m01.png'}), m02 = new Markers({iconUrl: 'media/m02.png'}), m03 = new Markers({iconUrl: 'media/m03.png'}),
-	m04 = new Markers({iconUrl: 'media/m04.png'}), m05 = new Markers({iconUrl: 'media/m05.png'}), m06 = new Markers({iconUrl: 'media/m06.png'});
+	m04 = new Markers({iconUrl: 'media/m04.png'}), m05 = new Markers({iconUrl: 'media/m05.png'}), m06 = new Markers({iconUrl: 'media/m06.png'}),
+	m07 = new Markers({iconUrl: 'media/m07.png'});
 
 L.icon = function (options) {
     return new L.Icon(options);
 };
 
-var p01 = L.marker([333, 777], {icon: m01}).addTo(map);
-var p02 = L.marker([402, 667], {icon: m02}).addTo(map);
-var p03 = L.marker([524.25, 659.1], {icon: m03}).addTo(map);
-var p04 = L.marker([516.5, 643.7], {icon: m04}).addTo(map);
-var p05 = L.marker([480.75, 606], {icon: m05}).addTo(map);
-var p06 = L.marker([495.9, 551.6], {icon: m06}).addTo(map);
+// var p01 = L.marker([333, 777], {icon: m01}).addTo(map);
+// var p02 = L.marker([402, 667], {icon: m02}).addTo(map);
+// var p03 = L.marker([524.25, 659.1], {icon: m03}).addTo(map);
+// var p04 = L.marker([516.5, 643.7], {icon: m04}).addTo(map);
+// var p05 = L.marker([480.75, 606], {icon: m05}).addTo(map);
+// var p06 = L.marker([495.9, 551.6], {icon: m06}).addTo(map);
 
-var mapStops = L.featureGroup([p01, p02, p03, p04, p05, p06]);
+var p01 = L.marker([134, 976], {icon: m01}).addTo(map);
+var p02 = L.marker([201, 872], {icon: m02}).addTo(map);
+var p03 = L.marker([325.5, 864], {icon: m03}).addTo(map);
+var p04 = L.marker([316, 852], {icon: m04}).addTo(map);
+var p05 = L.marker([281, 814], {icon: m05}).addTo(map);
+var p06 = L.marker([296, 762], {icon: m06}).addTo(map);
+var p07 = L.marker([389, 759], {icon: m07}).addTo(map);
+
+var mapStops = L.featureGroup([p01, p02, p03, p04, p05, p06,p07]);
 
 var leafletIds = [];
 for(var i = 0; i <mapStops.getLayers().length; i++){
