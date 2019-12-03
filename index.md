@@ -4,15 +4,20 @@
 <head>
   <title>SOSC3719: Group 6 Tour</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+<!--LEAFLET DOWNLOADED VERSION-->
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
+<script src="leaflet/leaflet.js"></script>
+
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
+   crossorigin=""/> -->
+
    <link rel="stylesheet" href="main.css">
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+<!--  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-   crossorigin=""></script>
+   crossorigin=""></script> -->
 
   <script src="p5.min.js"></script>
 
@@ -53,7 +58,7 @@
 			<div id="dr-comics">
 				<div class="images">
 					<div class="img-container">
-						<img src="media/drcomics.jpg" alt="Dr. Comics Storefront">
+						<img src="media/drcomics.jpg" alt="Max and Son Storefront">
 					</div>
 				</div>
 				<div class="infoBox">
@@ -75,7 +80,7 @@
 			<div id="graffitis">
 				<div class="images">
 					<div class="img-container">
-						<img src="media/graffitis.jpg" alt="In front of Graffiti’s ">
+						<img src="media/graffitis.jpg" alt="Graffiti’s Storefront">
 					</div>
 				</div>
 				<div class="infoBox">
@@ -113,7 +118,7 @@
 			<div id="akrams">
 				<div class="max">
 					<div class="img-container">
-						<img src="media/akrams.JPG" alt="Akram's Storefront">
+						<img src="media/akrams.jpg" alt="Max and Son Storefront">
 					</div>
 				</div>
 				<div class="infoBox">
@@ -149,6 +154,27 @@
 				</div>
 			</div>
 
+			<div id="cosmic">
+				<div class="max">
+					<div class="img-container">
+						<img src="media/cosmictreats05.jpg" alt="Cosmic Treats Storefront">
+					</div>
+				</div>
+				<div class="infoBox">
+					<h1>Tour Stop 7: Cosmic Treats</h1>
+					<p>
+						It is crazy to think an eatery spot like this one would close even with the high demand for vegan food options on the rise. A place like cosmic treats was known to be the place to come to enjoy the not so boring food with incredible flavour and the experience the neighbourhood reflected all at the same time. Kensington is filled with a unique atmosphere and to add such a creative eatery is what  contributes to the neighbourhoods environment, giving people the opportunity to try something new or something different. 
+						<br><br>
+						The owners named Tim Guimond and Elliot Alexander desired to create a menu that would sound appealing and loved the challenge to then deliver to the test buds while keeping the ingredients vegan friendly. They found their inspiration for foods through their travels around the world which drove them to their desire of opening a place for experimenting with vegan ingredients. Their goal became reality when they were pleased to get feed back that their vegan foods looked and tested delicious.
+ 						<br><br>
+ 						This place had brought everyone together to enjoy and learn how foods and flavours were created in other ways than the usual. Elliot and Tim loved sharing their ideas of vegan food options and expressed it through the most delicious looking foods you can place your eyes on. 
+ 						<br><br>
+ 						Unfortunately the property the eatery was located became newly leased and created a financial toll forcing Cosmic Treats to close down due to the enormous increase of rent that was tripled its original amount of $3000 to $9000 per month. The guys closed their business with a bang holding their last weekend's Pedestrian Sundays and the Veg Food Fest from September 6 to 8 before permanently closing Sunday, August 18, 2019.
+
+
+					</p>
+				</div>
+			</div>
 
 			<div class="gap-example">
     			<audio id="audio-player">
@@ -182,6 +208,9 @@
 					</svg>
 					<svg xmlns="http://www.w3.org/2000/svg" id="stop06" width="10" height="10">
 						<circle id="b06" cx="5" cy="5" r="3" stroke="#4B88A2" stroke-width="1.5" fill="white"/>
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" id="stop07" width="10" height="10">
+						<circle id="b07" cx="5" cy="5" r="3" stroke="#4B88A2" stroke-width="1.5" fill="white"/>
 					</svg>
 					
 				</div>
