@@ -5,19 +5,19 @@
   <title>SOSC3719: Group 6 Tour</title>
 
 <!--LEAFLET DOWNLOADED VERSION-->
-  <!--<link rel="stylesheet" href="leaflet/leaflet.css" />
-<script src="leaflet/leaflet.js"></script>-->
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
+<script src="leaflet/leaflet.js"></script>
 
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/> 
+   crossorigin=""/> -->
 
    <link rel="stylesheet" href="main.css">
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+<!--  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-   crossorigin=""></script>
+   crossorigin=""></script> -->
 
   <script src="p5.min.js"></script>
 
@@ -37,6 +37,21 @@
 		<div id="stop-container">
 
 			<!-- <div class="top-bar"></div> -->
+
+			<div id = "landing">
+				<div class="images">
+  					<div class="img-container">
+						<img src="media/kensington.jpg" alt="Kensington Market neighborhood | © Lindsay Lauckner / Culture Trip">
+					</div>
+				</div>
+				<div class="infoBox">
+					<h1>Tour: The Kensington Fortress</h1>
+					<p>
+						Welcome to the Fortress of Kensington Tour! This tour invites you to explore the history of closed businesses that were inherent in the development of Kensington Market, that are no longer represented. ... Featuring narrations from Carmen, Nathazha, Adiola, Monica, Harkarn, Lili, and a personal recount from Tony. We invite you to explore the historical account of spatial change Kensington through the non traditional cartographic lens. 
+					</p>
+				</div>
+				<div id ="startButton"><h1>START TOUR</h1></div>
+			</div>
 
 			<div id="la-salle">
 				<div class="images">
@@ -176,10 +191,10 @@
 				</div>
 			</div>
 
-			<div class="gap-example">
-    			<audio id="audio-player">
-       			 <source src="" type="audio/mpeg">
-    			</audio>
+			<div id = "media-player">
+				<div class="gap-example">
+    				<audio id="audio-player"> <source src="" type="audio/mpeg"> </audio>
+				</div>
 			</div>
 			<!-- Audio Icon for 15 seconds: https://icons8.com/icons/set/15-seconds -->
 
