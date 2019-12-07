@@ -27,10 +27,33 @@ var buttonIds = ["b01", "b02", "b03", "b04", "b05", "b06", "b07"];
 
 $(document).ready(function() {
 
+	$('#startButton').click(function(d){
+		var hideLanding = document.getElementById("landing");
+		hideLanding.style.display = "none";
+		// $("#landing").fadeOut();
+
+		var displayLa = document.getElementById("la-salle");
+		var displayBottom = document.getElementById("bottom-bar");
+		var displayMedia = document.getElementById("media-player");
+		displayLa.style.display = "block";
+		displayBottom.style.display = "block";
+		displayMedia.style.display = "block"; 	
+
+		increment();
+		markerGroup();
+
+		//var activeStop = document.getElementById(buttonIds[0]);
+		//activeStop.setAttribute("style", "fill: #54bbde");
+		//activeStop.style.fill="#4B88A2";
+		//console.log(stopIds[curr]);;
+		//$(stopPg[curr]).fadeIn();	
+	});
+
    $('#stop-container svg').click(function(e){  
    		target = e.target.id;
    		//console.log(this.id);
    	//console.log(e.currentTarget.id);
+
 
    		if(String(this.id) == "nextButton"){
    			increment();
@@ -53,20 +76,36 @@ $(document).ready(function() {
 });
 
 function increment(){
-	if(pgNum != maxNum){
+	// if(pgNum != maxNum){
+	// 	pgNum += 1;
+	// 	pastPgNum = pgNum - 1;
+	// 	changeStop(pgNum,pastPgNum);
+	// 	audio(pgNum);
+	// 	//console.log(pgNum, pastPgNum);
+	// } else  {
+	// 	pgNum = 6;
+	// 	pastPgNum = 5;
+	// 	changeStop(pgNum,pastPgNum);
+	// 	audio(pgNum);
+	// 	//console.log(pgNum, pastPgNum);
+	// }
+	
+	//console.log("next");
+
+	if(pgNum == maxNum-1){
+		pgNum = maxNum-1;
+		pastPgNum = maxNum-2;
+		changeStop(pgNum,pastPgNum);
+		audio(pgNum);
+		//console.log(pgNum, pastPgNum);
+	} else  {
 		pgNum += 1;
 		pastPgNum = pgNum - 1;
 		changeStop(pgNum,pastPgNum);
 		audio(pgNum);
 		//console.log(pgNum, pastPgNum);
-	} else  {
-		pgNum = 0;
-		pastPgNum = maxNum;
-		changeStop(pgNum,pastPgNum);
-		audio(pgNum);
-		//console.log(pgNum, pastPgNum);
 	}
-	//console.log("next");
+
 }
 
 function decrement(){
@@ -89,10 +128,12 @@ function decrement(){
 //console.log($(stopPg[0]).is(":visible"));
 
 function changeStop(curr, past){
+	// console.log(curr);
+
 	var activeStop = document.getElementById(buttonIds[curr]);
 	//activeStop.setAttribute("style", "fill: #54bbde");
 	activeStop.style.fill="#4B88A2";
-	//console.log(stopIds[curr]);;
+	// console.log(stopIds[curr]);;
 	$(stopPg[curr]).fadeIn();
 
 	if($(stopPg[past]).is(":visible")){
@@ -100,6 +141,8 @@ function changeStop(curr, past){
 		var deactivatedStop = document.getElementById(buttonIds[past]);
 		deactivatedStop.style.fill = "white";
 	}
+
+
 
 	//imgGallery(curr);
 }
@@ -118,6 +161,8 @@ var map = L.map('mapid', {
 	 // minZoom: -5
 });
 
+
+
 L.control.zoom({
      position:'bottomright'
 }).addTo(map);
@@ -126,13 +171,15 @@ map.panTo([150, 300]);
 // L.DomUtil.create('div', 'info');
 
 
+
 // var bounds = [[0,0], [1000,1000]];
 var bounds = [[0,0], [650,1080]];
 var image = L.imageOverlay('kensington-map-v2.png', bounds).addTo(map);
 map.fitBounds(bounds);
-
+var mapCenter = map.getCenter();
 
 //MARKERS
+function markerGroup(){
 var Markers = L.Icon.extend({
     options: {
         iconSize:     [40, 40],
@@ -145,6 +192,13 @@ var m01 = new Markers({iconUrl: 'media/m01.png'}), m02 = new Markers({iconUrl: '
 	m04 = new Markers({iconUrl: 'media/m04.png'}), m05 = new Markers({iconUrl: 'media/m05.png'}), m06 = new Markers({iconUrl: 'media/m06.png'}),
 	m07 = new Markers({iconUrl: 'media/m07.png'});
 
+var r01 = new Markers({iconUrl: 'media/mRed01.png'}), r02 = new Markers({iconUrl: 'media/mRed02.png'}), r03 = new Markers({iconUrl: 'media/mRed03.png'}),
+	r04 = new Markers({iconUrl: 'media/mRed04.png'}), r05 = new Markers({iconUrl: 'media/mRed05.png'}), r06 = new Markers({iconUrl: 'media/mRed06.png'}),
+	r07 = new Markers({iconUrl: 'media/mRed07.png'});
+
+var activeMarker = [r01, r02,r03,r04,r05,r06,r07];
+var inactiveMarker = [m01,m02,m03,m04,m05,m06,m07];
+
 L.icon = function (options) {
     return new L.Icon(options);
 };
@@ -156,7 +210,7 @@ L.icon = function (options) {
 // var p05 = L.marker([480.75, 606], {icon: m05}).addTo(map);
 // var p06 = L.marker([495.9, 551.6], {icon: m06}).addTo(map);
 
-var p01 = L.marker([134, 976], {icon: m01}).addTo(map);
+var p01 = L.marker([134, 976], {icon: r01}).addTo(map);
 var p02 = L.marker([201, 872], {icon: m02}).addTo(map);
 var p03 = L.marker([325.5, 864], {icon: m03}).addTo(map);
 var p04 = L.marker([316, 852], {icon: m04}).addTo(map);
@@ -165,6 +219,9 @@ var p06 = L.marker([296, 762], {icon: m06}).addTo(map);
 var p07 = L.marker([389, 759], {icon: m07}).addTo(map);
 
 var mapStops = L.featureGroup([p01, p02, p03, p04, p05, p06,p07]);
+
+var markerStops = [p01,p02,p03,p04,p05,p06,p07];
+
 
 var leafletIds = [];
 for(var i = 0; i <mapStops.getLayers().length; i++){
@@ -180,13 +237,15 @@ mapStops.eachLayer(function(layer){
    					pgNum = i;
    					changeStop(pgNum, pastPgNum);
    					audio(pgNum);
+   					markerStops[pastPgNum].setIcon(inactiveMarker[pastPgNum]);
+   					markerStops[pgNum].setIcon(activeMarker[pgNum]);
    				}
 			}
 		}
 		
 	});
 });
-	
+}
 
 /*
 var content ='<a href="https://www.google.ca">LINK</a>';
@@ -266,10 +325,18 @@ function pointInCircle(x, y, cx, cy, radius) {
 //USE THIS TO FIND COORDS FOR STOPS!!
 function onMapClick(e) {
 	console.log(e.latlng);
+	console.log(map.getPixelBounds());
 }
 map.on('click', onMapClick);
 
-
+function onZoom(e){
+	//console.log(map.getZoom());
+	if(map.getZoom()==0){
+		map.setView(mapCenter, 0);
+		console.log("boom");
+	}
+}
+map.on('zoomend', onZoom);
 
 new GreenAudioPlayer('.gap-example');
 
