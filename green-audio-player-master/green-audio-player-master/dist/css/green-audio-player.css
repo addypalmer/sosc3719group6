@@ -5,9 +5,7 @@
     transform: rotateZ(1turn); } }
 
 .green-audio-player {
-  /*width: 400px;*/
-  /*width:432px;*/
-  width:362px;
+   width: 362px;
   /*min-width: 300px;*/
   /*height: 56px;*/
   height:40px;
